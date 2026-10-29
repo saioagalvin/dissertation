@@ -1,0 +1,2170 @@
+2026-10-26 14:06:54  96 months to do (0 already done)
+2026-10-26 14:06:54  2015-01 no items, 0 s
+2026-10-26 14:06:54  2015-02 no items, 0 s
+2026-10-26 14:06:56  2015-03 no items, 2 s
+2026-10-26 14:06:56  2015-04 no items, 0 s
+2026-10-26 14:06:56  2015-05 no items, 0 s
+2026-10-26 14:06:56  2015-06 no items, 0 s
+2026-10-26 14:06:59  2015-07 no items, 2 s
+2026-10-26 14:06:59  2015-08 no items, 0 s
+2026-10-26 14:06:59  2015-09 no items, 0 s
+2026-10-26 14:27:46  2015-10 6 items, 1247 s
+2026-10-26 14:33:36  2015-11 6 items, 350 s
+2026-10-26 14:36:27  2015-12 3 items, 171 s
+2026-10-26 14:38:20  2016-01 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 0, Y offset 12
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=0, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2016/01/13/S2A_MSIL2A_20160113T184732_N0500_R070_T11UPQ_20231008T161453.SAFE/GRANULE/L2A_T11UPQ_A002927_20160113T184730/IMG_DATA/R20m/T11UPQ_20160113T184732_B12_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-26 14:42:15  2016-02 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 2, Y offset 2
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=1024, row_off=0, width=1024, height=1024) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2016/02/12/S2A_MSIL2A_20160212T184502_N0500_R070_T11UQQ_20231008T084532.SAFE/GRANULE/L2A_T11UQQ_A003356_20160212T184504/IMG_DATA/R20m/T11UQQ_20160212T184502_B03_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-26 14:47:24  2016-03 6 items, 308 s
+2026-10-26 14:51:50  2016-04 6 items, 266 s
+2026-10-26 14:57:52  2016-05 9 items, 362 s
+2026-10-26 15:02:51  2016-06 6 items, 300 s
+2026-10-26 15:09:58  2016-07 10 items, 427 s
+2026-10-26 15:13:43  2016-08 6 items, 225 s
+2026-10-26 15:20:25  2016-09 9 items, 403 s
+2026-10-26 15:21:10  2016-10 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 12
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=1024, width=575, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2016/10/16/S2A_MSIL2A_20161016T183342_N0500_R027_T11UQQ_20230929T045037.SAFE/GRANULE/L2A_T11UQQ_A006888_20161016T183946/IMG_DATA/R20m/T11UQQ_20161016T183342_SCL_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-26 15:28:16  2016-11 10 items, 426 s
+2026-10-26 15:35:08  2016-12 10 items, 412 s
+2026-10-26 15:42:26  2017-01 13 items, 438 s
+2026-10-26 15:48:08  2017-02 10 items, 343 s
+2026-10-26 15:53:34  2017-03 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 0, Y offset 12
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=0, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2017/03/18/S2A_MSIL2A_20170318T184101_N0500_R070_T11UPQ_20231014T194331.SAFE/GRANULE/L2A_T11UPQ_A009076_20170318T184055/IMG_DATA/R20m/T11UPQ_20170318T184101_B11_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-26 16:01:00  2017-04 FAILED:
+rasterio._err.CPLE_AppDefinedError: Stream too short
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: T12UUV_20170407T183921_B12_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 6: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 11: T12UUV_20170407T183921_B12_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 6: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=1024, width=575, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2017/04/07/S2A_MSIL2A_20170407T183921_N0500_R070_T12UUV_20231112T181111.SAFE/GRANULE/L2A_T12UUV_A009362_20170407T184017/IMG_DATA/R20m/T12UUV_20170407T183921_B12_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-26 16:30:25  2017-05 9 items, 473 s
+2026-10-26 16:41:42  2017-06 16 items, 677 s
+2026-10-26 17:06:03  2017-07 20 items, 1460 s
+2026-10-26 17:19:32  2017-08 20 items, 810 s
+2026-10-26 17:30:11  2017-09 16 items, 638 s
+2026-10-26 17:44:14  2017-10 19 items, 843 s
+2026-10-26 17:55:37  2017-11 16 items, 684 s
+2026-10-26 18:13:37  2017-12 26 items, 1080 s
+2026-10-26 18:26:27  2018-01 20 items, 770 s
+2026-10-26 18:46:31  2018-02 29 items, 1204 s
+2026-10-26 19:07:33  2018-03 33 items, 1261 s
+2026-10-26 19:27:07  2018-04 30 items, 1174 s
+2026-10-26 19:46:54  2018-05 FAILED:
+rasterio._err.CPLE_AppDefinedError: Stream too short
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: T12UUV_20180529T182921_B11_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 8: T12UUV_20180529T182921_B11_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=1024, width=575, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2018/05/29/S2A_MSIL2A_20180529T182921_N0500_R027_T12UUV_20230905T185438.SAFE/GRANULE/L2A_T12UUV_A015325_20180529T183027/IMG_DATA/R20m/T12UUV_20180529T182921_B11_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 09:59:51  2018-06 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 2, Y offset 8
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=1024, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2018/06/03/S2B_MSIL2A_20180603T182919_N0500_R027_T11UQQ_20230820T022101.SAFE/GRANULE/L2A_T11UQQ_A006488_20180603T183037/IMG_DATA/R20m/T11UQQ_20180603T182919_B02_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 10:26:05  2018-07 33 items, 1574 s
+2026-10-27 10:27:07  2018-08 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 0, Y offset 12
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=0, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2018/08/27/S2A_MSIL2A_20180827T182921_N0500_R027_T11UPQ_20230806T175654.SAFE/GRANULE/L2A_T11UPQ_A016612_20180827T182915/IMG_DATA/R20m/T11UPQ_20180827T182921_B02_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 10:46:11  2018-09 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 0, Y offset 12
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=0, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2018/09/11/S2B_MSIL2A_20180911T183019_N0500_R027_T11UPQ_20230801T080201.SAFE/GRANULE/L2A_T11UPQ_A007918_20180911T183604/IMG_DATA/R20m/T11UPQ_20180911T183019_B8A_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 10:47:03  2018-10 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 0, Y offset 8
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=0, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2018/10/31/S2B_MSIL2A_20181031T183509_N0500_R027_T11UPQ_20230706T155837.SAFE/GRANULE/L2A_T11UPQ_A008633_20181031T184032/IMG_DATA/R20m/T11UPQ_20181031T183509_B04_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 10:50:16  2018-11 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 0, Y offset 0
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=0, row_off=0, width=1024, height=1024) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2018/11/15/S2A_MSIL2A_20181115T183631_N0500_R027_T11UPQ_20230815T190052.SAFE/GRANULE/L2A_T11UPQ_A017756_20181115T184005/IMG_DATA/R20m/T11UPQ_20181115T183631_B02_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 11:06:35  2018-12 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 2, Y offset 0
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=1024, row_off=0, width=1024, height=1024) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2018/12/05/S2A_MSIL2A_20181205T183731_N0500_R027_T11UQQ_20230622T141701.SAFE/GRANULE/L2A_T11UQQ_A018042_20181205T183732/IMG_DATA/R20m/T11UQQ_20181205T183731_B11_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 11:29:43  2019-01 30 items, 1388 s
+2026-10-27 11:47:55  2019-02 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 2, Y offset 2
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=1024, row_off=0, width=1024, height=1024) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2019/02/28/S2B_MSIL2A_20190228T183309_N0500_R027_T11UQQ_20221127T222216.SAFE/GRANULE/L2A_T11UQQ_A010349_20190228T183311/IMG_DATA/R20m/T11UQQ_20190228T183309_B04_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 11:57:24  2019-03 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 0, Y offset 8
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=0, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2019/03/23/S2B_MSIL2A_20190323T184039_N0500_R070_T11UPQ_20221122T025924.SAFE/GRANULE/L2A_T11UPQ_A010678_20190323T184941/IMG_DATA/R20m/T11UPQ_20190323T184039_B11_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 12:09:37  2019-04 FAILED:
+rasterio._err.CPLE_AppDefinedError: Stream too short
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: T12UUV_20190424T182921_B02_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 8: T12UUV_20190424T182921_B02_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=1024, width=575, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2019/04/24/S2A_MSIL2A_20190424T182921_N0500_R027_T12UUV_20221109T095744.SAFE/GRANULE/L2A_T12UUV_A020044_20190424T183325/IMG_DATA/R20m/T12UUV_20190424T182921_B02_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 12:19:55  2019-05 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 2, Y offset 8
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=1024, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2019/05/14/S2A_MSIL2A_20190514T182921_N0500_R027_T11UQQ_20221217T144113.SAFE/GRANULE/L2A_T11UQQ_A020330_20190514T183250/IMG_DATA/R20m/T11UQQ_20190514T182921_B11_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 12:28:29  2019-06 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 2, Y offset 12
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=1024, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2019/06/23/S2A_MSIL2A_20190623T182921_N0500_R027_T11UQQ_20230509T232135.SAFE/GRANULE/L2A_T11UQQ_A020902_20190623T183717/IMG_DATA/R20m/T11UQQ_20190623T182921_B12_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 12:49:17  2019-07 33 items, 1248 s
+2026-10-27 12:54:21  2019-08 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 0, Y offset 8
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=0, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2019/08/27/S2B_MSIL2A_20190827T182919_N0500_R027_T11UPQ_20230715T221340.SAFE/GRANULE/L2A_T11UPQ_A012923_20190827T182943/IMG_DATA/R20m/T11UPQ_20190827T182919_B03_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 13:00:51  2019-09 FAILED:
+rasterio._err.CPLE_AppDefinedError: read: segment too long (89) with max (0) for codeblock 0 (p=3, b=0, r=2, c=0)
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: Failed to decode.
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: T11UQQ_20190901T182921_B11_20m.jp2, band 1: IReadBlock failed at X offset 3, Y offset 4: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 2: T11UQQ_20190901T182921_B11_20m.jp2, band 1: IReadBlock failed at X offset 3, Y offset 4: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=0, width=575, height=1024) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2019/09/01/S2A_MSIL2A_20190901T182921_N0500_R027_T11UQQ_20230501T124138.SAFE/GRANULE/L2A_T11UQQ_A021903_20190901T183851/IMG_DATA/R20m/T11UQQ_20190901T182921_B11_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 13:28:19  2019-10 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 0, Y offset 2
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=0, row_off=0, width=1024, height=1024) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2019/10/16/S2B_MSIL2A_20191016T183339_N0500_R027_T11UPQ_20230708T083209.SAFE/GRANULE/L2A_T11UPQ_A013638_20191016T183339/IMG_DATA/R20m/T11UPQ_20191016T183339_B8A_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 13:45:13  2019-11 29 items, 1014 s
+2026-10-27 14:02:43  2019-12 33 items, 1050 s
+2026-10-27 14:33:41  2020-01 FAILED:
+rasterio._err.CPLE_AppDefinedError: Stream too short
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: T12UUV_20200114T183719_B12_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 8: T12UUV_20200114T183719_B12_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=1024, width=575, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2020/01/14/S2B_MSIL2A_20200114T183719_N0500_R027_T12UUV_20230428T153231.SAFE/GRANULE/L2A_T12UUV_A014925_20200114T183718/IMG_DATA/R20m/T12UUV_20200114T183719_B12_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 15:50:09  2020-02 30 items, 4588 s
+2026-10-27 16:11:25  2020-03 30 items, 1276 s
+2026-10-27 18:13:53  2020-04 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 2, Y offset 8
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=1024, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2020/04/23/S2B_MSIL2A_20200423T182909_N0500_R027_T11UQQ_20230521T193918.SAFE/GRANULE/L2A_T11UQQ_A016355_20200423T183001/IMG_DATA/R20m/T11UQQ_20200423T182909_B04_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 18:30:51  2020-05 FAILED:
+rasterio._err.CPLE_AppDefinedError: Stream too short
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: T11UQQ_20200503T182919_B12_20m.jp2, band 1: IReadBlock failed at X offset 2, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 3, Y offset 8: T11UQQ_20200503T182919_B12_20m.jp2, band 1: IReadBlock failed at X offset 2, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=1024, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2020/05/03/S2B_MSIL2A_20200503T182919_N0500_R027_T11UQQ_20230422T210954.SAFE/GRANULE/L2A_T11UQQ_A016498_20200503T183124/IMG_DATA/R20m/T11UQQ_20200503T182919_B12_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 18:31:10  2020-06 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_base.pyx", line 321, in rasterio._base.DatasetBase.__init__
+  File "rasterio/_base.pyx", line 233, in rasterio._base.open_dataset
+  File "rasterio/_err.pyx", line 359, in rasterio._err.exc_wrap_pointer
+rasterio._err.CPLE_HttpResponseError: CURL error: Could not resolve host: eodata.dataspace.copernicus.eu
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 325, in _open
+    ds = SelfCleaningDatasetReader(self.url, sharing=False)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_base.pyx", line 330, in rasterio._base.DatasetBase.__init__
+rasterio.errors.RasterioIOError: CURL error: Could not resolve host: eodata.dataspace.copernicus.eu
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 383, in read
+    reader = self.dataset
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 379, in dataset
+    self._dataset = self._open()
+                    ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 334, in _open
+    raise RuntimeError(msg) from e
+RuntimeError: Error opening 's3://eodata/Sentinel-2/MSI/L2A_N0500/2020/06/10/S2A_MSIL2A_20200610T183921_N0500_R070_T12UUV_20230610T194036.SAFE/GRANULE/L2A_T12UUV_A025950_20200610T184818/IMG_DATA/R20m/T12UUV_20200610T183921_SCL_20m.jp2': RasterioIOError('CURL error: Could not resolve host: eodata.dataspace.copernicus.eu')
+
+2026-10-27 18:31:36  2020-07 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_base.pyx", line 321, in rasterio._base.DatasetBase.__init__
+  File "rasterio/_base.pyx", line 233, in rasterio._base.open_dataset
+  File "rasterio/_err.pyx", line 359, in rasterio._err.exc_wrap_pointer
+rasterio._err.CPLE_HttpResponseError: CURL error: Recv failure: Connection was reset
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 325, in _open
+    ds = SelfCleaningDatasetReader(self.url, sharing=False)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_base.pyx", line 330, in rasterio._base.DatasetBase.__init__
+rasterio.errors.RasterioIOError: CURL error: Recv failure: Connection was reset
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 383, in read
+    reader = self.dataset
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 379, in dataset
+    self._dataset = self._open()
+                    ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 334, in _open
+    raise RuntimeError(msg) from e
+RuntimeError: Error opening 's3://eodata/Sentinel-2/MSI/L2A_N0500/2020/07/10/S2A_MSIL2A_20200710T183921_N0500_R070_T12UUV_20230322T220215.SAFE/GRANULE/L2A_T12UUV_A026379_20200710T184653/IMG_DATA/R20m/T12UUV_20200710T183921_B02_20m.jp2': RasterioIOError('CURL error: Recv failure: Connection was reset')
+
+2026-10-27 18:32:25  2020-08 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_base.pyx", line 321, in rasterio._base.DatasetBase.__init__
+  File "rasterio/_base.pyx", line 233, in rasterio._base.open_dataset
+  File "rasterio/_err.pyx", line 359, in rasterio._err.exc_wrap_pointer
+rasterio._err.CPLE_HttpResponseError: CURL error: Recv failure: Connection was reset
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 325, in _open
+    ds = SelfCleaningDatasetReader(self.url, sharing=False)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_base.pyx", line 330, in rasterio._base.DatasetBase.__init__
+rasterio.errors.RasterioIOError: CURL error: Recv failure: Connection was reset
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 383, in read
+    reader = self.dataset
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 379, in dataset
+    self._dataset = self._open()
+                    ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 334, in _open
+    raise RuntimeError(msg) from e
+RuntimeError: Error opening 's3://eodata/Sentinel-2/MSI/L2A_N0500/2020/08/31/S2B_MSIL2A_20200831T182919_N0500_R027_T11UPQ_20230416T200142.SAFE/GRANULE/L2A_T11UPQ_A018214_20200831T182938/IMG_DATA/R20m/T11UPQ_20200831T182919_B12_20m.jp2': RasterioIOError('CURL error: Recv failure: Connection was reset')
+
+2026-10-27 18:33:27  2020-09 FAILED:
+rasterio._err.CPLE_AppDefinedError: Stream too short
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: T12UUV_20200903T183919_B02_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 8: T12UUV_20200903T183919_B02_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=1024, width=575, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2020/09/03/S2B_MSIL2A_20200903T183919_N0500_R070_T12UUV_20230313T031213.SAFE/GRANULE/L2A_T12UUV_A018257_20200903T184742/IMG_DATA/R20m/T12UUV_20200903T183919_B02_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 18:34:09  2020-10 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_base.pyx", line 321, in rasterio._base.DatasetBase.__init__
+  File "rasterio/_base.pyx", line 233, in rasterio._base.open_dataset
+  File "rasterio/_err.pyx", line 359, in rasterio._err.exc_wrap_pointer
+rasterio._err.CPLE_HttpResponseError: CURL error: Failed to connect to eodata.dataspace.copernicus.eu:443 after 21058 ms: Could not connect to server
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 325, in _open
+    ds = SelfCleaningDatasetReader(self.url, sharing=False)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_base.pyx", line 330, in rasterio._base.DatasetBase.__init__
+rasterio.errors.RasterioIOError: CURL error: Failed to connect to eodata.dataspace.copernicus.eu:443 after 21058 ms: Could not connect to server
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 383, in read
+    reader = self.dataset
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 379, in dataset
+    self._dataset = self._open()
+                    ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 334, in _open
+    raise RuntimeError(msg) from e
+RuntimeError: Error opening 's3://eodata/Sentinel-2/MSI/L2A_N0500/2020/10/13/S2B_MSIL2A_20201013T184329_N0500_R070_T12UUV_20230404T195122.SAFE/GRANULE/L2A_T12UUV_A018829_20201013T184519/IMG_DATA/R20m/T12UUV_20201013T184329_SCL_20m.jp2': RasterioIOError('CURL error: Failed to connect to eodata.dataspace.copernicus.eu:443 after 21058 ms: Could not connect to server')
+
+2026-10-27 18:34:57  2020-11 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_base.pyx", line 321, in rasterio._base.DatasetBase.__init__
+  File "rasterio/_base.pyx", line 233, in rasterio._base.open_dataset
+  File "rasterio/_err.pyx", line 359, in rasterio._err.exc_wrap_pointer
+rasterio._err.CPLE_HttpResponseError: CURL error: schannel: server closed abruptly (missing close_notify)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 325, in _open
+    ds = SelfCleaningDatasetReader(self.url, sharing=False)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_base.pyx", line 330, in rasterio._base.DatasetBase.__init__
+rasterio.errors.RasterioIOError: CURL error: schannel: server closed abruptly (missing close_notify)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 383, in read
+    reader = self.dataset
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 379, in dataset
+    self._dataset = self._open()
+                    ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 334, in _open
+    raise RuntimeError(msg) from e
+RuntimeError: Error opening 's3://eodata/Sentinel-2/MSI/L2A_N0500/2020/11/12/S2B_MSIL2A_20201112T184629_N0500_R070_T12UUV_20230303T041527.SAFE/GRANULE/L2A_T12UUV_A019258_20201112T184625/IMG_DATA/R20m/T12UUV_20201112T184629_SCL_20m.jp2': RasterioIOError('CURL error: schannel: server closed abruptly (missing close_notify)')
+
+2026-10-27 18:35:50  2020-12 FAILED:
+rasterio._err.CPLE_AppDefinedError: Stream too short
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: T12UUV_20201209T183749_B02_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 8: T12UUV_20201209T183749_B02_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=1024, width=575, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2020/12/09/S2B_MSIL2A_20201209T183749_N0500_R027_T12UUV_20230227T042536.SAFE/GRANULE/L2A_T12UUV_A019644_20201209T183747/IMG_DATA/R20m/T12UUV_20201209T183749_B02_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 18:36:44  2021-01 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 0, Y offset 0
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=0, row_off=0, width=1024, height=1024) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2021/01/31/S2B_MSIL2A_20210131T184619_N0500_R070_T11UPQ_20230523T063700.SAFE/GRANULE/L2A_T11UPQ_A020402_20210131T184743/IMG_DATA/R20m/T11UPQ_20210131T184619_SCL_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 18:37:17  2021-02 FAILED:
+rasterio._err.CPLE_AppDefinedError: Stream too short
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: T12UUV_20210210T184519_B02_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 8: T12UUV_20210210T184519_B02_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=1024, width=575, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2021/02/10/S2B_MSIL2A_20210210T184519_N0500_R070_T12UUV_20230610T075509.SAFE/GRANULE/L2A_T12UUV_A020545_20210210T184514/IMG_DATA/R20m/T12UUV_20210210T184519_B02_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 18:38:11  2021-03 FAILED:
+rasterio._err.CPLE_AppDefinedError: Stream too short
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: T12UUV_20210309T183109_SCL_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 8: T12UUV_20210309T183109_SCL_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=1024, width=575, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2021/03/09/S2B_MSIL2A_20210309T183109_N0500_R027_T12UUV_20230527T090150.SAFE/GRANULE/L2A_T12UUV_A020931_20210309T183911/IMG_DATA/R20m/T12UUV_20210309T183109_SCL_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 18:39:04  2021-04 FAILED:
+rasterio._err.CPLE_AppDefinedError: Stream too short
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: T12UUV_20210408T182919_B02_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 8: T12UUV_20210408T182919_B02_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=1024, width=575, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2021/04/08/S2B_MSIL2A_20210408T182919_N0500_R027_T12UUV_20230512T130113.SAFE/GRANULE/L2A_T12UUV_A021360_20210408T182918/IMG_DATA/R20m/T12UUV_20210408T182919_B02_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 18:52:44  2021-05 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_base.pyx", line 321, in rasterio._base.DatasetBase.__init__
+  File "rasterio/_base.pyx", line 233, in rasterio._base.open_dataset
+  File "rasterio/_err.pyx", line 359, in rasterio._err.exc_wrap_pointer
+rasterio._err.CPLE_HttpResponseError: CURL error: Failed to connect to eodata.dataspace.copernicus.eu:443 after 17595 ms: Could not connect to server
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 325, in _open
+    ds = SelfCleaningDatasetReader(self.url, sharing=False)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_base.pyx", line 330, in rasterio._base.DatasetBase.__init__
+rasterio.errors.RasterioIOError: CURL error: Failed to connect to eodata.dataspace.copernicus.eu:443 after 17595 ms: Could not connect to server
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 383, in read
+    reader = self.dataset
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 379, in dataset
+    self._dataset = self._open()
+                    ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 334, in _open
+    raise RuntimeError(msg) from e
+RuntimeError: Error opening 's3://eodata/Sentinel-2/MSI/L2A_N0500/2021/05/31/S2B_MSIL2A_20210531T183919_N0500_R070_T11UPQ_20230403T090240.SAFE/GRANULE/L2A_T11UPQ_A022118_20210531T184147/IMG_DATA/R20m/T11UPQ_20210531T183919_SCL_20m.jp2': RasterioIOError('CURL error: Failed to connect to eodata.dataspace.copernicus.eu:443 after 17595 ms: Could not connect to server')
+
+2026-10-27 19:28:57  2021-06 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 0, Y offset 12
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=0, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2021/06/15/S2A_MSIL2A_20210615T183921_N0500_R070_T11UPQ_20230201T155143.SAFE/GRANULE/L2A_T11UPQ_A031241_20210615T184504/IMG_DATA/R20m/T11UPQ_20210615T183921_B02_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 19:29:30  2021-07 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 0, Y offset 12
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=0, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2021/07/12/S2A_MSIL2A_20210712T182921_N0500_R027_T11UPQ_20230222T065825.SAFE/GRANULE/L2A_T11UPQ_A031627_20210712T183325/IMG_DATA/R20m/T11UPQ_20210712T182921_B02_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 19:30:31  2021-08 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_base.pyx", line 321, in rasterio._base.DatasetBase.__init__
+  File "rasterio/_base.pyx", line 233, in rasterio._base.open_dataset
+  File "rasterio/_err.pyx", line 359, in rasterio._err.exc_wrap_pointer
+rasterio._err.CPLE_OpenFailedError: '/vsis3/eodata/Sentinel-2/MSI/L2A_N0500/2021/08/21/S2A_MSIL2A_20210821T182921_N0500_R027_T11UPQ_20230120T092127.SAFE/GRANULE/L2A_T11UPQ_A032199_20210821T183657/IMG_DATA/R20m/T11UPQ_20210821T182921_SCL_20m.jp2' not recognized as being in a supported file format.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 325, in _open
+    ds = SelfCleaningDatasetReader(self.url, sharing=False)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_base.pyx", line 330, in rasterio._base.DatasetBase.__init__
+rasterio.errors.RasterioIOError: '/vsis3/eodata/Sentinel-2/MSI/L2A_N0500/2021/08/21/S2A_MSIL2A_20210821T182921_N0500_R027_T11UPQ_20230120T092127.SAFE/GRANULE/L2A_T11UPQ_A032199_20210821T183657/IMG_DATA/R20m/T11UPQ_20210821T182921_SCL_20m.jp2' not recognized as being in a supported file format.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 383, in read
+    reader = self.dataset
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 379, in dataset
+    self._dataset = self._open()
+                    ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 334, in _open
+    raise RuntimeError(msg) from e
+RuntimeError: Error opening 's3://eodata/Sentinel-2/MSI/L2A_N0500/2021/08/21/S2A_MSIL2A_20210821T182921_N0500_R027_T11UPQ_20230120T092127.SAFE/GRANULE/L2A_T11UPQ_A032199_20210821T183657/IMG_DATA/R20m/T11UPQ_20210821T182921_SCL_20m.jp2': RasterioIOError("'/vsis3/eodata/Sentinel-2/MSI/L2A_N0500/2021/08/21/S2A_MSIL2A_20210821T182921_N0500_R027_T11UPQ_20230120T092127.SAFE/GRANULE/L2A_T11UPQ_A032199_20210821T183657/IMG_DATA/R20m/T11UPQ_20210821T182921_SCL_20m.jp2' not recognized as being in a supported file format.")
+
+2026-10-27 19:31:07  2021-09 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 12
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=1024, width=575, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2021/09/03/S2A_MSIL2A_20210903T183921_N0500_R070_T11UQQ_20230129T010903.SAFE/GRANULE/L2A_T11UQQ_A032385_20210903T184049/IMG_DATA/R20m/T11UQQ_20210903T183921_SCL_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 20:13:02  2021-10 FAILED:
+rasterio._err.CPLE_AppDefinedError: Stream too short
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: T12UUV_20211015T183339_B11_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 8: T12UUV_20211015T183339_B11_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=1024, width=575, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2021/10/15/S2B_MSIL2A_20211015T183339_N0500_R027_T12UUV_20230125T110728.SAFE/GRANULE/L2A_T12UUV_A024077_20211015T183336/IMG_DATA/R20m/T12UUV_20211015T183339_B11_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 20:32:28  2021-11 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 2, Y offset 2
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=1024, row_off=0, width=1024, height=1024) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2021/11/02/S2A_MSIL2A_20211102T184531_N0500_R070_T11UQQ_20230108T083334.SAFE/GRANULE/L2A_T11UQQ_A033243_20211102T184534/IMG_DATA/R20m/T11UQQ_20211102T184531_B8A_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 20:40:26  2021-12 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 2
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=0, width=575, height=1024) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2021/12/17/S2B_MSIL2A_20211217T184759_N0500_R070_T11UQQ_20221225T212525.SAFE/GRANULE/L2A_T11UQQ_A024978_20211217T184758/IMG_DATA/R20m/T11UQQ_20211217T184759_SCL_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 21:07:40  2022-01 FAILED:
+rasterio._err.CPLE_AppDefinedError: read: segment too long (110) with max (11213) for codeblock 14 (p=1, b=2, r=2, c=0)
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: Failed to decode.
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: T11UQQ_20220121T184701_B03_20m.jp2, band 1: IReadBlock failed at X offset 3, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 8: T11UQQ_20220121T184701_B03_20m.jp2, band 1: IReadBlock failed at X offset 3, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=1024, width=575, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2022/01/21/S2A_MSIL2A_20220121T184701_N0510_R070_T11UQQ_20240503T225304.SAFE/GRANULE/L2A_T11UQQ_A034387_20220121T184703/IMG_DATA/R20m/T11UQQ_20220121T184701_B03_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-27 21:32:25  2022-02 29 items, 1483 s
+2026-10-27 21:53:03  2022-03 30 items, 1238 s
+2026-10-28 01:06:47  2022-04 FAILED:
+rasterio._err.CPLE_AppDefinedError: Stream too short
+
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+rasterio._err.CPLE_AppDefinedError: T12UUV_20220408T182921_B12_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 4, Y offset 8: T12UUV_20220408T182921_B12_20m.jp2, band 1: IReadBlock failed at X offset 0, Y offset 5: opj_get_decoded_tile() failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=2048, row_off=1024, width=575, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2022/04/08/S2A_MSIL2A_20220408T182921_N0510_R027_T12UUV_20240602T225243.SAFE/GRANULE/L2A_T12UUV_A035488_20220408T184022/IMG_DATA/R20m/T12UUV_20220408T182921_B12_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-28 09:33:12  2022-05 33 items, 30384 s
+2026-10-28 09:54:27  2022-06 30 items, 1275 s
+2026-10-28 10:18:24  2022-07 33 items, 1437 s
+2026-10-28 10:40:08  2022-08 30 items, 1304 s
+2026-10-28 11:02:54  2022-09 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 0, Y offset 8
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=0, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2022/09/03/S2B_MSIL2A_20220903T183919_N0510_R070_T11UPQ_20240722T080702.SAFE/GRANULE/L2A_T11UPQ_A028696_20220903T184845/IMG_DATA/R20m/T11UPQ_20220903T183919_B11_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-28 12:20:00  2022-10 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 2, Y offset 8
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=1024, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2022/10/03/S2B_MSIL2A_20221003T184219_N0510_R070_T11UQQ_20240728T090926.SAFE/GRANULE/L2A_T11UQQ_A029125_20221003T185020/IMG_DATA/R20m/T11UQQ_20221003T184219_B02_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-28 14:21:54  2022-11 FAILED:
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 897, in rasterio._io.DatasetReaderBase._read
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: IReadBlock failed at X offset 2, Y offset 8
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 385, in read
+    result = reader.read(
+             ^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 104, in read
+    return reader.read(window=window, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "rasterio/_warp.pyx", line 1357, in rasterio._warp.WarpedVRTReaderBase.read
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 900, in rasterio._io.DatasetReaderBase._read
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 218, in <module>
+    result = composite_month(y, m)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\saioa.DESKTOP-NE4E1ID\dissertation\s2_loading_stac_alldata.py", line 184, in composite_month
+    median, n_clear = dask.compute(median, n_clear)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\dask\base.py", line 769, in compute
+    results = schedule(expr, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\to_dask.py", line 189, in fetch_raster_window
+    data = reader.read(current_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saioa.DESKTOP-NE4E1ID\miniforge3\envs\myenv\Lib\site-packages\stackstac\rio_reader.py", line 399, in read
+    raise RuntimeError(msg) from e
+RuntimeError: Error reading Window(col_off=1024, row_off=1024, width=1024, height=744) from 's3://eodata/Sentinel-2/MSI/L2A_N0500/2022/11/14/S2A_MSIL2A_20221114T183631_N0510_R027_T11UQQ_20240802T140942.SAFE/GRANULE/L2A_T11UQQ_A038634_20221114T183629/IMG_DATA/R20m/T11UQQ_20221114T183631_B02_20m.jp2': RasterioIOError('Read failed. See previous exception for details.')
+
+2026-10-28 14:40:27  2022-12 37 items, 1113 s
+2026-10-28 14:40:27  finished in 2914 min; failed months: [(2016, 1), (2016, 2), (2016, 10), (2017, 3), (2017, 4), (2018, 5), (2018, 6), (2018, 8), (2018, 9), (2018, 10), (2018, 11), (2018, 12), (2019, 2), (2019, 3), (2019, 4), (2019, 5), (2019, 6), (2019, 8), (2019, 9), (2019, 10), (2020, 1), (2020, 4), (2020, 5), (2020, 6), (2020, 7), (2020, 8), (2020, 9), (2020, 10), (2020, 11), (2020, 12), (2021, 1), (2021, 2), (2021, 3), (2021, 4), (2021, 5), (2021, 6), (2021, 7), (2021, 8), (2021, 9), (2021, 10), (2021, 11), (2021, 12), (2022, 1), (2022, 4), (2022, 9), (2022, 10), (2022, 11)]
